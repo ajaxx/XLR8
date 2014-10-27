@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61A58E03-4F7C-47D1-9F69-C69EB81FF788}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XLR8</RootNamespace>
+    <AssemblyName>XLR8</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\ArrayExtensions.cs" />
+    <Compile Include="Collections\BoundBlockingQueueOverride.cs" />
+    <Compile Include="Collections\DictionaryExtensions.cs" />
+    <Compile Include="Utility\Caster.cs" />
+    <Compile Include="Collections\ArrayDeque.cs" />
+    <Compile Include="Collections\BoundBlockingQueue.cs" />
+    <Compile Include="Collections\Deque.cs" />
+    <Compile Include="Collections\IBlockingQueue.cs" />
+    <Compile Include="Collections\ImperfectBlockingQueue.cs" />
+    <Compile Include="Collections\LinkedBlockingQueue.cs" />
+    <Compile Include="Collections\Magic\MagicCollection.cs" />
+    <Compile Include="Collections\Magic\MagicDictionary.cs" />
+    <Compile Include="Collections\Magic\MagicList.cs" />
+    <Compile Include="Collections\Magic\MagicMarker.cs" />
+    <Compile Include="Collections\Magic\MagicStringDictionary.cs" />
+    <Compile Include="Collections\Tuple.cs" />
+    <Compile Include="Performance\PerformanceObserver.cs" />
+    <Compile Include="Performance\PerformanceObserverMono.cs" />
+    <Compile Include="Performance\PerformanceObserverWin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\BaseLock.cs" />
+    <Compile Include="Threading\CommonReadLock.cs" />
+    <Compile Include="Threading\CommonWriteLock.cs" />
+    <Compile Include="Threading\CountDownLatch.cs" />
+    <Compile Include="Threading\DummyReaderWriterLock.cs" />
+    <Compile Include="Threading\FairReaderWriterLock.cs" />
+    <Compile Include="Threading\FastThreadLocal.cs" />
+    <Compile Include="Threading\FastThreadStore.cs" />
+    <Compile Include="Threading\FifoReaderWriterLock.cs" />
+    <Compile Include="Threading\ILockable.cs" />
+    <Compile Include="Threading\IReaderWriterLock.cs" />
+    <Compile Include="Threading\IReaderWriterLockCommon.cs" />
+    <Compile Include="Threading\IThreadLocal.cs" />
+    <Compile Include="Threading\LockableExtensions.cs" />
+    <Compile Include="Threading\LockManager.cs" />
+    <Compile Include="Threading\MicroThread.cs" />
+    <Compile Include="Threading\MonitorLock.cs" />
+    <Compile Include="Threading\MonitorSlimLock.cs" />
+    <Compile Include="Threading\MonitorSpinLock.cs" />
+    <Compile Include="Threading\ReaderWriterLockManager.cs" />
+    <Compile Include="Threading\SlimLock.cs" />
+    <Compile Include="Threading\SlimReaderWriterLock.cs" />
+    <Compile Include="Threading\SlimThreadLocal.cs" />
+    <Compile Include="Threading\StandardReaderWriterLock.cs" />
+    <Compile Include="Threading\SystemThreadLocal.cs" />
+    <Compile Include="Threading\ThreadFactory.cs" />
+    <Compile Include="Threading\ThreadLocalFactory.cs" />
+    <Compile Include="Threading\ThreadLocalManager.cs" />
+    <Compile Include="Threading\VoidLock.cs" />
+    <Compile Include="Threading\VoidReaderWriterLock.cs" />
+    <Compile Include="Threading\WeakReference.cs" />
+    <Compile Include="Threading\XperThreadLocal.cs" />
+    <Compile Include="Utility\GenericExtensions.cs" />
+    <Compile Include="Utility\DateTimeExtensions.cs" />
+    <Compile Include="Utility\ScopedInstance.cs" />
+    <Compile Include="Utility\TrackedDisposable.cs" />
+    <Compile Include="Utility\VoidDisposable.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
