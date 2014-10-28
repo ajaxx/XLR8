@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>XLR8</id>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <authors>XLR8 Development Team</authors>
 		<language>en-us</language>
         <projectUrl>https://github.com/ajaxx/XLR8</projectUrl>
