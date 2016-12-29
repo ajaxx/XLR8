@@ -3,9 +3,10 @@
 	<Import Project="$(MSBuildProjectDirectory)\.nuget\NuGet.targets"/>
 
 	<PropertyGroup>
+		<Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
 		<Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
 		<Version Condition=" '$(CCNetLabel)' != '' ">$(CCNetLabel)</Version>
-		<Version Condition=" '$(Version)' == '' ">1.0.2</Version>
+		<Version Condition=" '$(Version)' == '' ">1.1.0</Version>
 		<NuGet>$(MSBuildProjectDirectory)/.nuget/NuGet.exe</NuGet>
 	</PropertyGroup>
 
@@ -18,17 +19,17 @@
 	</Target>
 	
 	<Target Name="Package">
-		<MSBuild Projects="XLR8.sln" Targets="Rebuild" Properties="Configuration=Release" />
+		<MSBuild Projects="XLR8.sln" Targets="Rebuild" Properties="Configuration=Release;Platform=Any CPU" />
 		<Exec Command="$(NuGet) pack $(MSBuildProjectDirectory)/XLR8.nuspec" />
 	</Target>
 
 	<Target Name="Rebuild">
-		<MSBuild Projects="XLR8.sln" Targets="Rebuild" Properties="Configuration=Debug" />
-		<MSBuild Projects="XLR8.sln" Targets="Rebuild" Properties="Configuration=Release" />
+		<MSBuild Projects="XLR8.sln" Targets="Rebuild" Properties="Configuration=Debug;Platform=Any CPU" />
+		<MSBuild Projects="XLR8.sln" Targets="Rebuild" Properties="Configuration=Release;Platform=Any CPU" />
 	</Target>
 
 	<Target Name="Clean">
-		<MSBuild Projects="XLR8.sln" Targets="Clean" Properties="Configuration=Debug" />
-		<MSBuild Projects="XLR8.sln" Targets="Clean" Properties="Configuration=Release" />
+		<MSBuild Projects="XLR8.sln" Targets="Clean" Properties="Configuration=Debug;Platform=Any CPU" />
+		<MSBuild Projects="XLR8.sln" Targets="Clean" Properties="Configuration=Release;Platform=Any CPU" />
 	</Target>
 </Project>
