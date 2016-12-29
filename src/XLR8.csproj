@@ -44,6 +44,10 @@
     <Compile Include="Collections\ArrayExtensions.cs" />
     <Compile Include="Collections\BoundBlockingQueueOverride.cs" />
     <Compile Include="Collections\DictionaryExtensions.cs" />
+    <Compile Include="Collections\FIFOHashSet.cs" />
+    <Compile Include="Collections\Heap.cs" />
+    <Compile Include="Collections\SkipList.cs" />
+    <Compile Include="Collections\Treap.cs" />
     <Compile Include="Utility\Caster.cs" />
     <Compile Include="Collections\ArrayDeque.cs" />
     <Compile Include="Collections\BoundBlockingQueue.cs" />
